@@ -11,16 +11,7 @@
     <title>MultiTracks.com</title>
     <link media="all" rel="stylesheet" href="./PageToSync/css/index.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $("li.tab-filter--item a").click(function (event) {
-
-                $("li.tab-filter--item").removeClass("is-active");
-
-                $(this).parent().addClass("is-active");
-            });
-        });
-    </script>
+    <script src="PageToSync/js/scripts.js"></script>
 </head>
 <body class="premium standard u-fix-fancybox-iframe">
     <form runat="server">
