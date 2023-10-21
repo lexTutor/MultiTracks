@@ -10,6 +10,17 @@
     <meta charset="utf-8">
     <title>MultiTracks.com</title>
     <link media="all" rel="stylesheet" href="./PageToSync/css/index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("li.tab-filter--item a").click(function (event) {
+
+                $("li.tab-filter--item").removeClass("is-active");
+
+                $(this).parent().addClass("is-active");
+            });
+        });
+    </script>
 </head>
 <body class="premium standard u-fix-fancybox-iframe">
     <form runat="server">
@@ -66,7 +77,9 @@
                     <section id="songs" class="standard--holder">
                         <div class="discovery--section--header">
                             <h2>Top Songs</h2>
-                            <a class="discovery--section--header--view-all" href="#">View All</a>
+
+                            <asp:LinkButton ID="viewAllSongs" Text="View All" runat="server"
+                                class="discovery--section--header--view-all" OnClick="OnViewAllSongsClicked" />
                         </div>
                         <!-- /.discovery-select -->
                         <asp:Repeater runat="server" ID="Songs">
@@ -126,7 +139,8 @@
                         <section id="albums" class="standard--holder">
                             <div class="discovery--section--header">
                                 <h2>Albums</h2>
-                                <a class="discovery--section--header--view-all" href="#albums">View All</a>
+                                <asp:LinkButton ID="viewAllAlbums" Text="View All" runat="server" OnClick="OnViewAllAlbumsClicked"
+                                    class="discovery--section--header--view-all" />
                             </div>
                             <!-- /.discovery-select -->
 
