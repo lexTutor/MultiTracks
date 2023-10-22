@@ -125,7 +125,7 @@ public partial class artistDetails : System.Web.UI.Page
     {
         var sql = new SQL();
 
-        if (!int.TryParse(Request.QueryString["id"], out int artistId) || artistId == 0)
+        if (!int.TryParse(Request.QueryString["artistID"], out int artistId) || artistId == 0)
         {
             artistId = 5; //A default as Hillsong because I love their songs.
         }
